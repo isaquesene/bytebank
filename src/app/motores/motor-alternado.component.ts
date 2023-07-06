@@ -11,8 +11,8 @@ export class MotorAlternadoComponent{
 
   @Output() aoAddmotor = new EventEmitter<any>();
 
-  fabricante: Text;
-  modelo: Text;
+  fabricante: string;
+  modelo: string;
   corrent: Text;
   tensao: Text;
   potencia: Text;
@@ -22,23 +22,29 @@ export class MotorAlternadoComponent{
   rendimento: Text;
   rolamento: Text;
 
-
-  addmotor(){
+  add(){
     console.log('Novo motor cadastrado');
     //console.log('Fabricante: ', this.fabricante);
     //console.log('Modelo: ', this.modelo);
     const addMotores = {
-      Fabricante: this.fabricante,
-      Modelo: this.modelo,
+      fabricante: this.fabricante,
+      modelo: this.modelo,
       corrent: this.corrent,
-      Tensão: this.tensao,
-      Potencia: this.potencia,
-      RPM: this.rpm,
-      Grau: this.grau,
-      IP_IN: this.ipin,
-      Rendimento: this.rendimento,
-      Rolamento: this.rolamento
-    }
+      tensao: this.tensao,
+      potencia: this.potencia,
+      rpm: this.rpm,
+      grau: this.grau,
+      ipin: this.ipin,
+      rendimento: this.rendimento,
+      rolamento: this.rolamento
+    };
+
     this.aoAddmotor.emit(addMotores);
+    this.limparCampo();
+  }
+
+  limparCampo(){
+    this.fabricante = "";
+    this.modelo = "";
   }
 }
