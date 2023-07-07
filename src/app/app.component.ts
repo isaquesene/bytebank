@@ -22,7 +22,7 @@ export class AppComponent {
 
   add($event){
     console.log($event);
-    this.motoress.push($event);
-    //this.modelo = $event.modelo;
+    const motores = {...$event, data: new Date()};
+    this.motoress.push(motores);
   }
 }

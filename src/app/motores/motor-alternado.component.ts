@@ -13,14 +13,14 @@ export class MotorAlternadoComponent{
 
   fabricante: string;
   modelo: string;
-  corrent: Text;
-  tensao: Text;
-  potencia: Text;
-  rpm: Text;
-  grau: Text;
-  ipin: Text;
-  rendimento: Text;
-  rolamento: Text;
+  corrent: string;
+  tensao: string;
+  potencia: string;
+  rpm: string;
+  grau: string;
+  ipin: string;
+  rendimento: string;
+  rolamento: string;
 
   add(){
     console.log('Novo motor cadastrado');
@@ -46,5 +46,13 @@ export class MotorAlternadoComponent{
   limparCampo(){
     this.fabricante = "";
     this.modelo = "";
+    this.corrent = "";
+    this.tensao = "";
+    this.potencia = "";
+    this.rpm = "";
+    this.grau = "";
+    this.ipin = "";
+    this.rendimento = "";
+    this.rolamento = "";
   }
 }

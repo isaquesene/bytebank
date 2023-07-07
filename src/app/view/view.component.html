@@ -1,4 +1,43 @@
-<div *ngFor="let motores of motoress">
+<table class="tabela">
+  <thead class="tabela__cabecalho">
+    <th class="tabela__cabecalho__conteudo">Data registro</th>
+    <th class="tabela__cabecalho__conteudo">Fabricante</th>
+    <th class="tabela__cabecalho__conteudo">Modelo</th>
+    <th class="tabela__cabecalho__conteudo">Corrent</th>
+    <th class="tabela__cabecalho__conteudo">Tensão</th>
+    <th class="tabela__cabecalho__conteudo">Potência</th>
+    <th class="tabela__cabecalho__conteudo">RPM</th>
+    <th class="tabela__cabecalho__conteudo">Grau</th>
+    <th class="tabela__cabecalho__conteudo">In/Pin</th>
+    <th class="tabela__cabecalho__conteudo">Rendimento</th>
+    <th class="tabela__cabecalho__conteudo">Rolamento</th>
+  </thead>
+  <tbody>
+    <tr class="tabela__linha" *ngFor="let motores of motoress">
+      <td class="tabela__conteudo">{{motores.data | date: "shortDate"}}</td>
+      <td class="tabela__conteudo">{{motores.fabricante}}</td>
+      <td class="tabela__conteudo">{{motores.modelo}}</td>
+      <td class="tabela__conteudo">{{motores.corrent}}</td>
+      <td class="tabela__conteudo">{{motores.tensao}}</td>
+      <td class="tabela__conteudo">{{motores.potencia}}</td>
+      <td class="tabela__conteudo">{{motores.rpm}}</td>
+      <td class="tabela__conteudo">{{motores.grau}}</td>
+      <td class="tabela__conteudo">{{motores.ipin}}</td>
+      <td class="tabela__conteudo">{{motores.rendimento}}</td>
+      <td class="tabela__conteudo">{{motores.rolamento}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <div *ngFor="let motores of motoress">
   <p>Fabricante: {{ motores?.fabricante }}</p>
   <p>Modelo: {{ motores?.modelo }}</p>
-</div>
+  <p>Corrent: {{ motores?.corrent }}</p>
+  <p>Tensão: {{ motores?.tensao }}</p>
+  <p>Potência: {{ motores?.potencia }}</p>
+  <p>RPM: {{ motores?.rpm }}</p>
+  <p>Grau: {{ motores?.grau }}</p>
+  <p>In/Pin: {{ motores?.ipin }}</p>
+  <p>Rendimento: {{ motores?.rendimento }}</p>
+  <p>Rolamento: {{ motores?.rolamento }}</p>
+</div> -->
