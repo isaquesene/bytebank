@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MotoresService } from '../services/motores.service';
 
 @Component({
   selector: 'app-view',
@@ -7,11 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ViewComponent implements OnInit{
 
-  @Input() motoress: any[];
+  motoress: any[];
 
-  constructor(){}
+  constructor(private service: MotoresService){}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.motoress = this.service.motoress;
+  }
 
 
 }

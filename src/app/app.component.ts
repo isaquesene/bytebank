@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MotoresService } from './services/motores.service';
 
 @Component({
   selector: 'app-root',
@@ -7,22 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bytebank';
-  /* fabricante: Text;
-  modelo: Text;
-  corrent: Text;
-  tensao: Text;
-  potencia: Text;
-  rpm: Text;
-  grau: Text;
-  ipin: Text;
-  rendimento: Text;
-  rolamento: Text; */
+  //motoress: any[] = [];
 
-  motoress: any[] = [];
+  constructor(private service: MotoresService){
+
+  }
+
 
   add($event){
-    console.log($event);
-    const motores = {...$event, data: new Date()};
-    this.motoress.push(motores);
+    this.service.addM($event);
+
   }
 }

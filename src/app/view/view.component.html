@@ -12,7 +12,7 @@
     <th class="tabela__cabecalho__conteudo">Rendimento</th>
     <th class="tabela__cabecalho__conteudo">Rolamento</th>
   </thead>
-  <tbody>
+  <tbody *ngIf="motoress?.length > 0; else listaVazia">
     <tr class="tabela__linha" *ngFor="let motores of motoress">
       <td class="tabela__conteudo">{{motores.data | date: "shortDate"}}</td>
       <td class="tabela__conteudo">{{motores.fabricante}}</td>
@@ -28,6 +28,10 @@
     </tr>
   </tbody>
 </table>
+
+<ng-template #listaVazia>
+  <p>Nenhuma dados cadastrado...</p>
+</ng-template>
 
 <!-- <div *ngFor="let motores of motoress">
   <p>Fabricante: {{ motores?.fabricante }}</p>
