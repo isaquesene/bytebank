@@ -1,0 +1,46 @@
+{
+  "motoress": [
+    {
+      "id": 1,
+      "fabricante": "Honda",
+      "modelo": "CBX250cc",
+      "corrent": "test",
+      "tensao": "test",
+      "potencia": "test",
+      "rpm": "test",
+      "grau": "test",
+      "ipin": "test",
+      "rendimento": "test",
+      "rolamento": "test",
+      "data": ""
+    },
+    {
+      "id": "2",
+      "fabricante": "Yamaha",
+      "modelo": "Fazer250cc",
+      "corrent": "test",
+      "tensao": "test",
+      "potencia": "test",
+      "rpm": "test",
+      "grau": "test",
+      "ipin": "test",
+      "rendimento": "test",
+      "rolamento": "test",
+      "data": ""
+    },
+    {
+      "fabricante": "Honda",
+      "modelo": "CBX 250",
+      "corrent": "test corrent",
+      "tensao": "teste tensao",
+      "potencia": "test potencia",
+      "rpm": "2000",
+      "grau": "test grau",
+      "ipin": "test ipin",
+      "rendimento": "test rendimeto",
+      "rolamento": "test rolamento",
+      "data": "2023-07-07T21:11:44.453Z",
+      "id": "xV5MvY7"
+    }
+  ]
+}

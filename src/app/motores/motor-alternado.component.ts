@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Output } from '@angular/core';
 import { Component } from "@angular/core";
+import { Motoress } from 'src/models/motores.model';
+import { MotoresService } from '../services/motores.service';
 
 @Component({
     selector: 'app-motores',
@@ -22,11 +25,13 @@ export class MotorAlternadoComponent{
   rendimento: string;
   rolamento: string;
 
+  constructor(private service: MotoresService){}
+
   add(){
     console.log('Novo motor cadastrado');
     //console.log('Fabricante: ', this.fabricante);
     //console.log('Modelo: ', this.modelo);
-    const addMotores = {
+    const addMotores: Motoress = {
       fabricante: this.fabricante,
       modelo: this.modelo,
       corrent: this.corrent,
@@ -39,8 +44,16 @@ export class MotorAlternadoComponent{
       rolamento: this.rolamento
     };
 
-    this.aoAddmotor.emit(addMotores);
-    this.limparCampo();
+    //this.aoAddmotor.emit(addMotores);
+
+    this.service.addM(addMotores).subscribe(resultado => {
+      console.log(resultado);
+      this.limparCampo();
+    },
+    (error) => console.error(error)
+    );
+
+    //this.limparCampo();
   }
 
   limparCampo(){

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MotoresService } from '../services/motores.service';
+import { Motoress } from 'src/models/motores.model';
 
 @Component({
   selector: 'app-view',
@@ -13,7 +14,10 @@ export class ViewComponent implements OnInit{
   constructor(private service: MotoresService){}
 
   ngOnInit() {
-    this.motoress = this.service.motoress;
+    this.service.todas().subscribe((motoress: Motoress[]) => {
+      console.log(motoress);
+      this.motoress = motoress;
+    })
   }
 
 
