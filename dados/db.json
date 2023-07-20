@@ -41,6 +41,34 @@
       "rolamento": "test rolamento",
       "data": "2023-07-07T21:11:44.453Z",
       "id": "xV5MvY7"
+    },
+    {
+      "fabricante": "shinwrI",
+      "modelo": "fazer250",
+      "corrent": "test corrent",
+      "tensao": "teste tensao",
+      "potencia": "20000WP",
+      "rpm": "2000",
+      "grau": "test grau",
+      "ipin": "test ipin",
+      "rendimento": "test rendimeto",
+      "rolamento": "test rolamento",
+      "data": "2023-07-19T22:08:08.339Z",
+      "id": "LpNG21f"
+    },
+    {
+      "fabricante": "toyota",
+      "modelo": "corola",
+      "corrent": "teste corrent",
+      "tensao": "teste tensão",
+      "potencia": "teste potencia",
+      "rpm": "teste rpm",
+      "grau": "test proteção",
+      "ipin": "test ipin",
+      "rendimento": "test rendimeto",
+      "rolamento": "test rolamento",
+      "data": "2023-07-20T14:59:56.419Z",
+      "id": "E1XMvyD"
     }
   ]
 }

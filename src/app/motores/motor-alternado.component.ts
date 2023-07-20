@@ -3,6 +3,7 @@ import { EventEmitter, Output } from '@angular/core';
 import { Component } from "@angular/core";
 import { Motoress } from 'src/models/motores.model';
 import { MotoresService } from '../services/motores.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-motores',
@@ -25,7 +26,7 @@ export class MotorAlternadoComponent{
   rendimento: string;
   rolamento: string;
 
-  constructor(private service: MotoresService){}
+  constructor(private service: MotoresService, private router: Router){}
 
   add(){
     console.log('Novo motor cadastrado');
@@ -49,6 +50,8 @@ export class MotorAlternadoComponent{
     this.service.addM(addMotores).subscribe(resultado => {
       console.log(resultado);
       this.limparCampo();
+      /* this.router.navigate(['view']); */
+      this.router.navigateByUrl('view');
     },
     (error) => console.error(error)
     );
